@@ -11,6 +11,9 @@
 		53C14E2729CA48C900B752C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C14E2629CA48C900B752C1 /* ContentView.swift */; };
 		53C14E2929CA48CA00B752C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C14E2829CA48CA00B752C1 /* Assets.xcassets */; };
 		53C14E2C29CA48CA00B752C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C14E2B29CA48CA00B752C1 /* Preview Assets.xcassets */; };
+		53C14E3429CA4CB900B752C1 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C14E3329CA4CB900B752C1 /* StoreModel.swift */; };
+		53C14E3629CA4D7D00B752C1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C14E3529CA4D7D00B752C1 /* Product.swift */; };
+		53C14E3929CA4F0900B752C1 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C14E3829CA4F0900B752C1 /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		53C14E2629CA48C900B752C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53C14E2829CA48CA00B752C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C14E2B29CA48CA00B752C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53C14E3329CA4CB900B752C1 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		53C14E3529CA4D7D00B752C1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		53C14E3829CA4F0900B752C1 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		53C14E2329CA48C900B752C1 /* MVExampleSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				53C14E3729CA4EEF00B752C1 /* Services */,
+				53C14E3229CA4CA400B752C1 /* Models */,
 				53C14E2429CA48C900B752C1 /* MVExampleSwiftUIApp.swift */,
 				53C14E2629CA48C900B752C1 /* ContentView.swift */,
 				53C14E2829CA48CA00B752C1 /* Assets.xcassets */,
@@ -65,6 +73,23 @@
 				53C14E2B29CA48CA00B752C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		53C14E3229CA4CA400B752C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53C14E3329CA4CB900B752C1 /* StoreModel.swift */,
+				53C14E3529CA4D7D00B752C1 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53C14E3729CA4EEF00B752C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53C14E3829CA4F0900B752C1 /* Webservice.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53C14E2729CA48C900B752C1 /* ContentView.swift in Sources */,
+				53C14E3629CA4D7D00B752C1 /* Product.swift in Sources */,
 				53C14E2529CA48C900B752C1 /* MVExampleSwiftUIApp.swift in Sources */,
+				53C14E3929CA4F0900B752C1 /* Webservice.swift in Sources */,
+				53C14E3429CA4CB900B752C1 /* StoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +310,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = csharpTech.net.MVExampleSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +333,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = csharpTech.net.MVExampleSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
